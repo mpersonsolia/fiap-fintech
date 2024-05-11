@@ -186,7 +186,7 @@ p {
 	background: var(--color-primary);
 }
 
-.fintech-sidebar-menu-link span {
+.fintech-sidebar-menu-link-icon {
 	transition: all 300ms ease;
 }
 
