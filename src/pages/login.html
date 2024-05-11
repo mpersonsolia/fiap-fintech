@@ -14,34 +14,42 @@
 		<script src="../js/login.js"></script>
 	</head>
 	<body onload="loadScreen()">
-		<div class="tecsidel-login">
-			<div class="tecsidel-login-container">
+		<div class="fintech-login">
+			<div class="fintech-login-container">
 				<img
 					src="../img/fintech-logo.png"
-					class="tecsidel-login-container-logo"
+					class="fintech-login-container-logo"
 					alt="Fintech-Logo"
 				/>
 
-				<div class="tecsidel-login-container-input">
+				<div class="fintech-login-container-input">
 					<input
 						type="text"
-						class="tecsidel-login-container-input-email"
-						id="tecsidel-login-input-email"
+						class="fintech-login-container-input-email"
+						id="fintech-login-input-email"
 						placeholder="E-mail"
 					/>
 					<input
 						type="password"
-						class="tecsidel-login-container-input-password"
-						id="tecsidel-login-input-password"
+						class="fintech-login-container-input-password"
+						id="fintech-login-input-password"
 						placeholder="Senha"
 					/>
-					<a onclick="signIn()" class="tecsidel-login-container-input-button"
+					<a onclick="signIn()" class="fintech-login-container-input-button"
 						>ENTRAR</a
 					>
 				</div>
-				<a href="#">ESQUECEU A SENHA?</a>
+				<p class="fintech-login-forgotPassword">ESQUECEU SUA SENHA?</p>
+				<div class="fintech-login-subscribe">
+					<p class="fintech-login-container-question">
+						Ainda não tem uma conta?
+					</p>
+					<a onclick="subscribe()" class="fintech-login-container-link"
+						>Cadastre-se</a
+					>
+				</div>
 			</div>
-			<div class="tecsidel-login-background">
+			<div class="fintech-login-background">
 				<img src="../img/background-login.png" alt="Background-Login" />
 			</div>
 		</div>

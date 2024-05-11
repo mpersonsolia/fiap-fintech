@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title></title>
+		<link
+			rel="shortcut icon"
+			type="image/x-icon"
+			href="../../img/favicon.png"
+		/>
+		<link rel="stylesheet" href="../styles/index.css" />
+		<link rel="stylesheet" href="../styles/subscribe.css" />
+		<script src="../js/login.js"></script>
+	</head>
+	<body onload="loadScreen()">
+		<div class="fintech-subscribe">
+			<div class="fintech-subscribe-container">
+				<img
+					src="../img/fintech-logo.png"
+					class="fintech-subscribe-logo"
+					alt="Fintech-Logo"
+				/>
+
+				<div class="fintech-subscribe-inputs">
+					<input
+						type="text"
+						class="fintech-subscribe-inputs-name"
+						id="fintech-login-input-email"
+						placeholder="nome completo"
+					/>
+					<input
+						type="text"
+						class="fintech-subscribe-inputs-dayOfBirth"
+						id="fintech-login-input-email"
+						placeholder="data de nascimento"
+					/>
+					<input
+						type="text"
+						class="fintech-subscribe-inputs-cpf"
+						id="fintech-login-input-email"
+						placeholder="CPF"
+					/>
+					<input
+						type="text"
+						class="fintech-subscribe-inputs-password"
+						id="fintech-login-input-email"
+						placeholder="senha"
+					/>
+					<input
+						type="text"
+						class="fintech-subscribe-inputs-confirmPassword"
+						id="fintech-login-input-email"
+						placeholder="confirmar senha"
+					/>
+					<a onclick="signIn()" class="fintech-subscribe-inputs-button"
+						>CADASTRAR</a
+					>
+				</div>
+				<div class="fintech-subscribe-login">
+					<p class="fintech-subscribe-login-question">Já tem uma conta?</p>
+					<a onclick="login()" class="fintech-subscribe-login-link"
+						>Faça o login.</a
+					>
+				</div>
+			</div>
+		</div>
+		<script src="../js/subscribe.js"></script>
+	</body>
+</html>
