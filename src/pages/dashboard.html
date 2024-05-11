@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title></title>
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="../styles/dashboard.css" />
+		<link rel="stylesheet" href="../styles/index.css" />
+		<script src="../js/dashboard.js"></script>
+		<script src="../js/index.js"></script>
+	</head>
+	<body>
+		<h1 class="fintech-dashboard-h1">Olá, Patrícia!</h1>
+		<div id="currentDate"></div>
+		<!--------------- BEGINNING JAVASCRIPT --------------->
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+				var date = new Date();
+				var day = date.getDate();
+				var dayOfWeekIndex = date.getDay(); // Corrigido
+				var monthIndex = date.getMonth();
+				var year = date.getFullYear();
+
+				var daysOfTheWeek = [
+					'Domingo',
+					'Segunda-feira',
+					'Terça-feira',
+					'Quarta-feira',
+					'Quinta-feira',
+					'Sexta-feira',
+					'Sábado',
+				];
+
+				var months = [
+					'Janeiro',
+					'Fevereiro',
+					'Março',
+					'Abril',
+					'Maio',
+					'Junho',
+					'Julho',
+					'Agosto',
+					'Setembro',
+					'Outubro',
+					'Novembro',
+					'Dezembro',
+				];
+
+				document.getElementById('currentDate').innerHTML =
+					daysOfTheWeek[dayOfWeekIndex] +
+					', ' +
+					day +
+					' de ' +
+					months[monthIndex] +
+					' de ' +
+					year;
+			});
+		</script>
+		<!--------------- END JAVASCRIPT --------------->
+		<div class="fintech-dashboard">
+			<div class="fintech-dashboard-cards">
+				<div class="fintech-dashboard-cards-info">
+					<div class="fintech-dashboard-cards-info-title">
+						<p>Saldo Atual</p>
+					</div>
+					<div class="fintech-dashboard-cards-info-graphic">
+						<canvas id="graphic" width="180" height="180">
+							<script>
+								var canvas = document.getElementById('graphic');
+								var ctx = canvas.getContext('2d');
+								var centerX = canvas.width / 2;
+								var centerY = canvas.height / 2;
+								var radius = Math.min(centerX, centerY);
+
+								var currentBalance = 'R$ 13.800,00';
+								var data = [70, 20, 10]; // Dados para o gráfico
+								var colors = ['#6e79b0', '#b06e9a', '#6eb085']; // Cores para as fatias do gráfico
+
+								var total = data.reduce(function (total, num) {
+									return total + num;
+								}, 0);
+
+								var startAngle = -Math.PI / 2;
+								var endAngle = 0;
+
+								for (var i = 0; i < data.length; i++) {
+									endAngle = startAngle + (data[i] / total) * (Math.PI * 2);
+									ctx.beginPath();
+									ctx.arc(
+										centerX,
+										centerY,
+										radius,
+										startAngle,
+										endAngle,
+										false
+									);
+									ctx.lineWidth = 30;
+									ctx.strokeStyle = colors[i];
+									ctx.stroke();
+									startAngle = endAngle;
+								}
+
+								// Desenha o valor monetário no meio do círculo
+								ctx.fillStyle = 'black';
+								ctx.font = `bold 23px 'Titillium Web', sans-serif`;
+								ctx.textAlign = 'center';
+								ctx.textBaseline = 'middle';
+								ctx.fillText(currentBalance, centerX, centerY);
+							</script>
+						</canvas>
+					</div>
+					<div class="fintech-dashboard-cards-info-caption">
+						<div class="fintech-dashboard-cards-info-caption-color">
+							<svg width="40" height="50">
+								<circle cx="25" cy="25" r="8" fill="#6e79b0" />
+							</svg>
+							<p class="fintech-dashboard-cards-info-caption-color-description">
+								Cartões
+							</p>
+						</div>
+						<div class="fintech-dashboard-cards-info-caption-color">
+							<svg width="40" height="50">
+								<circle cx="25" cy="25" r="8" fill="#b06e9a" />
+							</svg>
+							<p class="fintech-dashboard-cards-info-caption-color-description">
+								Investimentos
+							</p>
+						</div>
+						<div class="fintech-dashboard-cards-info-caption-color">
+							<svg width="40" height="50">
+								<circle cx="25" cy="25" r="8" fill="#6eb085" />
+							</svg>
+							<p class="fintech-dashboard-cards-info-caption-color-description">
+								Outros
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="fintech-dashboard-cards-info">
+					<div class="fintech-dashboard-cards-info-title">
+						<p>Cartões</p>
+					</div>
+					<div class="fintech-dashboard-cards-display">
+						<div class="fintech-dashboard-cards-info-card">
+							<div class="fintech-dashboard-cards-info-card-detail">
+								<h2 class="fintech-dashboard-h2">Mastercard</h2>
+								<p class="fintech-dashboard-cards-info-card-detail-amount">
+									R$ 5.000,00
+								</p>
+							</div>
+							<div class="fintech-dashboard-cards-info-card-detail">
+								<h2 class="fintech-dashboard-h2">VISA</h2>
+								<p class="fintech-dashboard-cards-info-card-detail-amount">
+									R$ 7.000,00
+								</p>
+							</div>
+							<div class="fintech-dashboard-cards-info-card-detail">
+								<h2 class="fintech-dashboard-h2">AMEX</h2>
+								<p class="fintech-dashboard-cards-info-card-detail-amount">
+									R$ 3.000,00
+								</p>
+							</div>
+						</div>
+						<div class="fintech-dashboard-cards-info-total">
+							<h2 class="fintech-dashboard-h2 success">TOTAL</h2>
+
+							<p class="fintech-dashboard-cards-info-total-amount success">
+								R$ 15.000,00
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="fintech-dashboard-cards-info">
+					<div class="fintech-dashboard-cards-info-title">
+						<p>Investimentos</p>
+					</div>
+					<div class="fintech-dashboard-cards-display">
+						<div class="fintech-dashboard-cards-info-card">
+							<div class="fintech-dashboard-cards-info-card-detail">
+								<h2 class="fintech-dashboard-h2">Dólar</h2>
+								<p class="fintech-dashboard-cards-info-card-detail-amount">
+									R$ 400,00
+								</p>
+							</div>
+							<div class="fintech-dashboard-cards-info-card-detail">
+								<h2 class="fintech-dashboard-h2">Tesouro Direto</h2>
+								<p class="fintech-dashboard-cards-info-card-detail-amount">
+									R$ 1.000,00
+								</p>
+							</div>
+							<div class="fintech-dashboard-cards-info-card-detail">
+								<h2 class="fintech-dashboard-h2">CDB</h2>
+								<p class="fintech-dashboard-cards-info-card-detail-amount">
+									R$ 2.000,00
+								</p>
+							</div>
+						</div>
+						<div class="fintech-dashboard-cards-info-total">
+							<h2 class="fintech-dashboard-h2 success">TOTAL</h2>
+
+							<p class="fintech-dashboard-cards-info-total-amount success">
+								R$ 3.400,00
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="fintech-dashboard-purchases">
+				<h2 class="fintech-dashboard-h2 fintech-dashboard-purchases-title">
+					Últimas Transações
+				</h2>
+				<div class="fintech-dashboard-purchases-overflow">
+					<div class="fintech-dashboard-purchases-table">
+						<table class="fintech-dashboard-purchases-table-list">
+							<thead>
+								<tr>
+									<th>Data</th>
+									<th>Hora</th>
+									<th>Espécie</th>
+									<th>Descrição</th>
+									<th>Valor</th>
+								</tr>
+							</thead>
+							<tbody></tbody>
+							<!------------------------  BEGINNING JAVASCRIPT FOR LAST UPDATE TABLE ------------------------>
+							<script type="text/javascript">
+								const lastPurchases = [
+									{
+										date: '02/03/24',
+										time: '13:55:03',
+										type: 'Cartão VISA',
+										description: 'Padaria Pão Primavera',
+										amount: 'R$ 5,90',
+									},
+									{
+										date: '02/03/24',
+										time: '13:55:03',
+										type: 'Cartão VISA',
+										description: 'Padaria Pão Primavera',
+										amount: 'R$ 5,90',
+									},
+									{
+										date: '02/03/24',
+										time: '13:55:03',
+										type: 'Cartão VISA',
+										description: 'Padaria Pão Primavera',
+										amount: 'R$ 5,90',
+									},
+								];
+
+								lastPurchases.forEach((update) => {
+									const tr = document.createElement('tr');
+									const trContent = `
+										<td>${update.date}</td>
+										<td>${update.time}</td>
+										<td>${update.type}</td>
+										<td>${update.description}</td>
+										<td>${update.amount}</td>
+                        				`;
+
+									tr.innerHTML = trContent;
+									document.querySelector('table tbody').appendChild(tr);
+								});
+							</script>
+							<!------------------------  END JAVASCRIPT FOR LAST UPDATE TABLE ------------------------>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

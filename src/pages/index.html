@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Fintech</title>
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+			rel="stylesheet"
+		/>
+		<link rel="shortcut icon" type="image/x-icon" href="../img/favicon.png" />
+		<link rel="stylesheet" href="../styles/index.css" />
+		<script src="../js/index.js"></script>
+	</head>
+	<body onload="loadScreen()">
+		<div class="fintech-index-container">
+			<div class="fintech-topbar">
+				<div class="fintech-topbar-logo">
+					<img src="../img/fintech-logo.png" alt="Fintech_Logo" />
+				</div>
+				
+					<div class="fintech-topbar-profile-picture">
+						<img src="../img/profile-picture.jpg" alt="Profile_Picture" />
+					</div>
+				</div>
+			</div>
+			<a class="fintech-sidebar-button" onclick="toggleSidebar()">
+				<span class="material-icons-sharp fintech-sidebar-button-menu-mobile"
+					>menu</span
+				>
+			</a>
+			<div id="fintech-sidebar">
+				<div id="fintech-sidebar-menu" id="fintech-sidebar-menu">
+					<a
+						class="fintech-sidebar-menu-link"
+						onclick="showScreen('dashboard')"
+						id="link-button-dashboard"
+					>
+						<span class="material-icons-sharp fintech-sidebar-menu-link-icon"
+							>dashboard</span
+						>
+						<h3 class="fintech-sidebar-menu-link-title">Dashboard</h3>
+					</a>
+					<a
+						class="fintech-sidebar-menu-link"
+						onclick="showScreen('cards')"
+						id="link-button-cards"
+					>
+						<span class="material-icons-sharp fintech-sidebar-menu-link-icon"
+							><span class="material-symbols-sharp"> credit_card </span></span
+						>
+						<h3 class="fintech-sidebar-menu-link-title">Cartões</h3>
+					</a>
+					<a
+						class="fintech-sidebar-menu-link"
+						onclick="showScreen('cards')"
+						id="link-button-cards"
+					>
+						<span class="material-icons-sharp fintech-sidebar-menu-link-icon"
+							>receipt_long</span
+						>
+						<h3 class="fintech-sidebar-menu-link-title">Investimentos</h3>
+					</a>
+					<a
+						class="fintech-sidebar-menu-link"
+						onclick="showScreen('transactions')"
+						id="link-button-transactions"
+					>
+						<span class="material-icons-sharp fintech-sidebar-menu-link-icon"
+							>paid</span
+						>
+						<h3 class="fintech-sidebar-menu-link-title">Transações</h3>
+					</a>
+					<a
+						class="fintech-sidebar-menu-link"
+						href="./login.html"
+						id="link-button"
+					>
+						<span class="material-icons-sharp fintech-sidebar-menu-link-icon"
+							>logout</span
+						>
+						<h3 class="fintech-sidebar-menu-link-title">Sair</h3>
+					</a>
+				</div>
+				<main class="fintech-main-container">
+					<div id="fintech-main"></div>
+				</main>
+			</div>
+		</div>
+	</body>
+</html>

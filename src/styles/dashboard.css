@@ -1,0 +1,125 @@
+.fintech-dashboard-h1 {
+	color: var(--color-dark);
+	margin-bottom: 0.5rem;
+}
+
+#currentDate {
+	margin-bottom: 2rem;
+}
+
+.fintech-dashboard-cards,
+.fintech-dashboard-cards-display {
+	display: flex;
+}
+
+.fintech-dashboard-cards-info {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	max-width: 40rem;
+	height: 20rem;
+	background: var(--color-white);
+	border-radius: var(--card-border-radius);
+	box-shadow: 0 0.5rem 0.5rem var(--color-light);
+	margin: 0 1rem 1rem 0;
+	padding: 1rem;
+}
+
+.fintech-dashboard-cards-info:hover {
+	box-shadow: none;
+}
+
+.fintech-dashboard-cards-info-title {
+	margin: 0.5rem 0 0 1rem;
+}
+
+.fintech-dashboard-cards-info-title p,
+.fintech-dashboard-cards-info-caption-purple-description {
+	font-size: 0.88rem;
+}
+
+.fintech-dashboard-cards-info-caption {
+	display: flex;
+	justify-content: space-between;
+}
+
+canvas {
+	margin: auto;
+	display: block;
+	margin-top: 30px;
+	border-radius: 50%;
+}
+
+.fintech-dashboard-cards-info-caption-color {
+	display: flex;
+	align-items: center;
+}
+
+.fintech-dashboard-cards-info-card {
+	padding: 0.5rem 0 0 1.8rem;
+}
+
+.fintech-dashboard-cards-info-card-detail {
+	margin-bottom: 1rem;
+}
+
+.fintech-dashboard-cards-info-card-detail-amount {
+	font-size: 1rem;
+}
+
+.fintech-dashboard-cards-info-total {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: 6rem;
+}
+
+.fintech-dashboard-cards-info-total-amount {
+	font-size: 1.2rem;
+}
+
+.fintech-dashboard-updates {
+	max-width: 100%;
+	overflow-x: auto;
+}
+
+.fintech-dashboard-updates-title {
+	margin-bottom: 1rem;
+}
+
+.fintech-dashboard-purchases-title {
+	margin: 1rem 0 0.5rem 0;
+}
+
+.fintech-dashboard-purchases-overflow {
+	overflow: hidden;
+	border-radius: var(--card-border-radius);
+}
+
+.fintech-dashboard-purchases-table {
+	overflow: auto;
+}
+
+.fintech-dashboard-purchases-table-list {
+	border-collapse: collapse;
+	background: var(--color-white);
+	border-radius: var(--card-border-radius);
+	width: 100%;
+	table-layout: auto;
+}
+
+.fintech-dashboard-purchases-table-list th,
+.fintech-dashboard-purchases-table-list td {
+	padding: 15px;
+	text-align: center;
+	border-bottom: 1px solid var(--color-light);
+	width: 20%;
+}
+
+/******************************* TABLET STYLE *******************************/
+@media only screen and (max-width: 768px) {
+}
+
+/**************************************** MOBILE STYLE ****************************************/
+@media only screen and (max-width: 375px) {
+}

@@ -1,0 +1,81 @@
+.fintech-transaction-overflow {
+	overflow: hidden;
+	border-radius: var(--card-border-radius);
+	width: 80rem;
+}
+
+.fintech-transaction-table {
+	height: 40rem;
+	overflow: auto;
+}
+
+#fintech-transaction-table-list {
+	width: 80rem;
+	border-collapse: collapse;
+	background-color: var(--color-white);
+	padding: 1rem;
+	text-align: center;
+}
+
+#fintech-transaction-table-list th,
+#fintech-transaction-table-list td {
+	height: 2.8rem;
+}
+
+#fintech-transaction-table-list td {
+	border-bottom: 0.063rem solid var(--color-light);
+}
+
+#fintech-transaction-table-list th {
+	position: sticky;
+	top: 0;
+	background-color: var(--color-white);
+}
+
+#fintech-transaction-table-list tr {
+	border-radius: var(--card-border-radius);
+}
+
+/**************************************** TABLET STYLE ****************************************/
+@media only screen and (max-width: 768px) {
+	.fintech-title-h1 {
+		font-size: 1.4rem;
+	}
+
+	.fintech-transaction-overflow {
+		width: 98%;
+	}
+
+	.tecsidel-freeFlow-table {
+		height: calc(100vh - 19rem);
+	}
+
+	#fintech-transaction-table-list th,
+	#fintech-transaction-table-list td {
+		height: 2.2rem;
+	}
+}
+
+/**************************************** MOBILE STYLE ****************************************/
+@media only screen and (max-width: 375px) {
+	.fintech-title-h1,
+	.fintech-transaction {
+		margin-left: 1rem;
+	}
+
+	.fintech-title-h1 {
+		font-size: 1.3rem;
+	}
+
+	.fintech-transaction-table {
+		height: calc(100vh - 24rem);
+		width: 22rem;
+		border-radius: var(--card-border-radius);
+	}
+
+	#fintech-transaction-table-list th,
+	#fintech-transaction-table-list td {
+		height: 1.8rem;
+		font-size: 0.8rem;
+	}
+}
