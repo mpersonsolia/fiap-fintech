@@ -9,7 +9,7 @@
 .fintech-investments-form-container {
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-start;
 }
 
 .fintech-investments-form {
@@ -20,7 +20,7 @@
 	box-shadow: 0 0.5rem 0.5rem var(--color-light);
 	margin: 0 1rem 1rem 0;
 	padding: 1rem;
-	width: 80rem;
+	width: 100%;
 }
 
 .fintech-investments-form-inputs {
@@ -64,7 +64,6 @@
 .fintech-investments-overflow {
 	overflow: hidden;
 	border-radius: var(--card-border-radius);
-	width: 80rem;
 }
 
 .fintech-investments-table {
@@ -73,7 +72,7 @@
 }
 
 #fintech-investments-table-list {
-	width: 80rem;
+	width: 100%;
 	border-collapse: collapse;
 	background-color: var(--color-white);
 	padding: 1rem;

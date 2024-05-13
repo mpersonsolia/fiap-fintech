@@ -132,10 +132,13 @@ canvas {
 @media only screen and (max-width: 768px) {
 	body {
 		margin-left: 0.5rem;
+		height: 100%;
 	}
+
 	.fintech-dashboard {
 		overflow: auto;
-		height: calc(100vh - 10rem);
+		height: 100%;
+		margin-left: 0.5rem;
 	}
 
 	.fintech-dashboard-h1 {
@@ -165,11 +168,15 @@ canvas {
 	}
 
 	.fintech-dashboard-cards-info-total {
-		margin-left: 3rem;
+		margin-left: 1rem;
 	}
 
 	.fintech-dashboard-purchases-title {
 		margin: 0.5rem 0 0.5rem 0;
+	}
+
+	.fintech-dashboard-purchases-table {
+		height: 2rem;
 	}
 }
 

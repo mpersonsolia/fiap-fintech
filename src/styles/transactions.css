@@ -20,7 +20,7 @@
 	box-shadow: 0 0.5rem 0.5rem var(--color-light);
 	margin: 0 1rem 1rem 0;
 	padding: 1rem;
-	width: 80rem;
+	width: 100%;
 }
 
 .fintech-transactions-form-inputs {
@@ -64,16 +64,15 @@
 .fintech-transactions-overflow {
 	overflow: hidden;
 	border-radius: var(--card-border-radius);
-	width: 80rem;
 }
 
 .fintech-transactions-table {
-	height: calc(100vh - 22rem);
 	overflow: auto;
 }
 
 #fintech-transactions-table-list {
-	width: 80rem;
+	width: 100%;
+	height: 100%;
 	border-collapse: collapse;
 	background-color: var(--color-white);
 	padding: 1rem;
@@ -102,6 +101,10 @@
 
 /**************************************** TABLET STYLE ****************************************/
 @media only screen and (max-width: 768px) {
+	body {
+		padding-right: 0.5rem;
+	}
+
 	.fintech-title-h1 {
 		font-size: 1.4rem;
 		margin-bottom: 0.5rem;
@@ -115,7 +118,7 @@
 		display: flex;
 		margin: 0 0.5rem 0.5rem 0;
 		padding: 1rem;
-		width: calc(100vh - 23rem);
+		width: 100%;
 	}
 
 	.fintech-transactions-form-container {
@@ -148,15 +151,13 @@
 	}
 
 	.fintech-transactions-table {
-		height: calc(100vh - 22rem);
-		width: calc(100vh - 23rem);
 		border-radius: var(--card-border-radius);
 		overflow: auto;
 	}
 
 	#fintech-transactions-table-list {
-		height: calc(100vh - 25rem);
-		width: calc(100vh - 23rem);
+		height: 100%;
+		width: 100%;
 	}
 
 	#fintech-transactions-table-list th,
@@ -185,7 +186,7 @@
 		display: flex;
 		margin: 0 0.5rem 0.5rem 0;
 		padding: 1rem;
-		width: calc(100vh - 35rem);
+		width: 100%;
 	}
 
 	.fintech-transactions-form-container {
@@ -218,8 +219,6 @@
 	}
 
 	.fintech-transactions-table {
-		height: calc(100vh - 35rem);
-		width: calc(100vh - 35rem);
 		border-radius: var(--card-border-radius);
 	}
 
