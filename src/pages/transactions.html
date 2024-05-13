@@ -13,10 +13,78 @@
 	</head>
 	<body>
 		<h1 class="fintech-title-h1">Transações</h1>
-		<div class="fintech-transaction">
-			<div class="fintech-transaction-overflow">
-				<div class="fintech-transaction-table">
-					<table id="fintech-transaction-table-list">
+
+		<div class="fintech-transactions">
+			<div class="fintech-transactions-form">
+				<h2 class="fintech-title-h2">Nova Transação</h2>
+
+				<form action="#" method="POST">
+					<div class="fintech-transactions-form-container">
+						<div class="fintech-transactions-form-inputs">
+							<div class="fintech-transactions-form-item">
+								<label for="nome" class="fintech-transactions-form-label"
+									>Data:</label
+								>
+								<input
+									type="text"
+									id="date"
+									name="data"
+									class="fintech-transactions-form-input"
+									required
+								/>
+							</div>
+
+							<div class="fintech-transactions-form-item">
+								<label for="type" class="fintech-transactions-form-label"
+									>Espécie:</label
+								>
+								<input
+									type="text"
+									id="type"
+									name="tipo"
+									class="fintech-transactions-form-input"
+									required
+								/>
+							</div>
+
+							<div class="fintech-transactions-form-item">
+								<label for="amount" class="fintech-transactions-form-label"
+									>Descrição:</label
+								>
+								<input
+									type="text"
+									id="description"
+									name="descricao"
+									class="fintech-transactions-form-input"
+									required
+								/>
+							</div>
+
+							<div class="fintech-transactions-form-item">
+								<label for="amount" class="fintech-transactions-form-label"
+									>Valor:</label
+								>
+								<input
+									type="text"
+									id="amount"
+									name="valor"
+									class="fintech-transactions-form-input"
+									required
+								/>
+							</div>
+						</div>
+						<div>
+							<button class="fintech-transactions-form-button">
+								ADICIONAR
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<div class="fintech-transactions-overflow">
+				<div class="fintech-transactions-table">
+					<table id="fintech-transactions-table-list">
 						<thead>
 							<tr>
 								<th>Data</th>

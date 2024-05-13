@@ -12,23 +12,75 @@
 		<link rel="stylesheet" href="../styles/index.css" />
 	</head>
 	<body>
-		<h1 class="fintech-title-h1">Transações</h1>
+		<h1 class="fintech-title-h1">Investimentos</h1>
 		<div class="fintech-investments">
-			<div class="fintech-investments-overflow">
-				<div class="fintech-investments-table">
-					<table id="fintech-investments-table-list">
-						<thead>
-							<tr>
-								<th>Data</th>
-								<th>Hora</th>
-								<th>Espécie</th>
-								<th>Valor</th>
-							</tr>
-						</thead>
-						<tbody></tbody>
-						<script src="../js/investments.js"></script>
-					</table>
-				</div>
+			<div class="fintech-investments-form">
+				<h2 class="fintech-title-h2">Novo Investimento</h2>
+
+				<form action="#" method="POST">
+					<div class="fintech-investments-form-container">
+						<div class="fintech-investments-form-inputs">
+							<div class="fintech-investments-form-item">
+								<label for="nome" class="fintech-investments-form-label"
+									>Data:</label
+								>
+								<input
+									type="text"
+									id="date"
+									name="data"
+									class="fintech-investments-form-input"
+									required
+								/>
+							</div>
+
+							<div class="fintech-investments-form-item">
+								<label for="type" class="fintech-investments-form-label"
+									>Espécie:</label
+								>
+								<input
+									type="text"
+									id="type"
+									name="tipo"
+									class="fintech-investments-form-input"
+									required
+								/>
+							</div>
+
+							<div class="fintech-investments-form-item">
+								<label for="amount" class="fintech-investments-form-label"
+									>Valor:</label
+								>
+								<input
+									type="text"
+									id="amount"
+									name="valor"
+									class="fintech-investments-form-input"
+									required
+								/>
+							</div>
+						</div>
+						<div>
+							<button class="fintech-investments-form-button">ADICIONAR</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<div class="fintech-investments-overflow">
+			<div class="fintech-investments-table">
+				<table id="fintech-investments-table-list">
+					<thead>
+						<tr>
+							<th>Data</th>
+							<th>Hora</th>
+							<th>Espécie</th>
+							<th>Valor</th>
+						</tr>
+					</thead>
+					<tbody></tbody>
+					<script src="../js/investments.js"></script>
+				</table>
 			</div>
 		</div>
 	</body>

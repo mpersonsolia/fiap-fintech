@@ -13,73 +13,69 @@
 		<script src="../js/index.js"></script>
 	</head>
 	<body onload="loadScreen()">
-		<div class="fintech-index-container">
+		<div class="fintech-container">
 			<div class="fintech-topbar">
 				<div class="fintech-topbar-logo">
-					<img src="../img/fintech-logo.png" alt="Fintech_Logo" />
+					<img src="../img/fintech-logo.png" alt="Fintech-Logo" />
 				</div>
-				
+				<div class="fintech-topbar-profile">
 					<div class="fintech-topbar-profile-picture">
-						<img src="../img/profile-picture.jpg" alt="Profile_Picture" />
+						<img src="../img/profile-picture.jpg" alt="Profile-Picture" />
 					</div>
 				</div>
 			</div>
-			<a class="fintech-sidebar-button" onclick="toggleSidebar()">
-				<span class="material-icons-sharp fintech-sidebar-button-menu-mobile"
+			<a id="fintech-button-menu" onclick="toggleSidebar()">
+				<span class="material-icons-sharp fintech-dashboard-icon-menu"
 					>menu</span
 				>
 			</a>
-			<div id="fintech-sidebar">
-				<div id="fintech-sidebar-menu" id="fintech-sidebar-menu">
+			<div class="tecisdel-sidebar-main-column-display">
+				<div class="fintech-sidebar" id="fintech-sidebar">
 					<a
-						class="fintech-sidebar-menu-link"
+						class="fintech-sidebar-item"
 						onclick="showScreen('dashboard')"
 						id="link-button-dashboard"
 					>
-						<span class="material-icons-sharp fintech-sidebar-menu-link-icon"
+						<span class="material-icons-sharp fintech-index-sidebar-icon"
 							>dashboard</span
 						>
-						<h3 class="fintech-sidebar-menu-link-title">Dashboard</h3>
+						<h3 class="fintech-index-sidebar-title">Dashboard</h3>
 					</a>
 					<a
-						class="fintech-sidebar-menu-link"
+						class="fintech-sidebar-item"
 						onclick="showScreen('cards')"
 						id="link-button-cards"
 					>
-						<span class="material-icons-sharp fintech-sidebar-menu-link-icon"
-							><span class="material-symbols-sharp"> credit_card </span></span
+						<span class="material-icons-sharp fintech-index-sidebar-icon"
+							>no_crash</span
 						>
-						<h3 class="fintech-sidebar-menu-link-title">Cartões</h3>
+						<h3 class="fintech-index-sidebar-title">Cartões</h3>
 					</a>
 					<a
-						class="fintech-sidebar-menu-link"
+						class="fintech-sidebar-item"
 						onclick="showScreen('investments')"
 						id="link-button-investments"
 					>
-						<span class="material-icons-sharp fintech-sidebar-menu-link-icon"
-							>receipt_long</span
+						<span class="material-icons-sharp fintech-index-sidebar-icon"
+							>speed</span
 						>
-						<h3 class="fintech-sidebar-menu-link-title">Investimentos</h3>
+						<h3 class="fintech-index-sidebar-title">Investimentos</h3>
 					</a>
 					<a
-						class="fintech-sidebar-menu-link"
+						class="fintech-sidebar-item"
 						onclick="showScreen('transactions')"
 						id="link-button-transactions"
 					>
-						<span class="material-icons-sharp fintech-sidebar-menu-link-icon"
-							>paid</span
+						<span class="material-icons-sharp fintech-index-sidebar-icon"
+							>report</span
 						>
-						<h3 class="fintech-sidebar-menu-link-title">Transações</h3>
+						<h3 class="fintech-index-sidebar-title">Transações</h3>
 					</a>
-					<a
-						class="fintech-sidebar-menu-link"
-						href="./login.html"
-						id="link-button"
-					>
-						<span class="material-icons-sharp fintech-sidebar-menu-link-icon"
+					<a class="fintech-sidebar-item" href="./login.html" id="link-button">
+						<span class="material-icons-sharp fintech-index-sidebar-icon"
 							>logout</span
 						>
-						<h3 class="fintech-sidebar-menu-link-title">Sair</h3>
+						<h3 class="fintech-index-sidebar-title">Sair</h3>
 					</a>
 				</div>
 				<main class="fintech-main-container">

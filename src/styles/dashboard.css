@@ -12,7 +12,8 @@
 	display: flex;
 }
 
-.fintech-dashboard-cards-info {
+.fintech-dashboard-cards-info,
+.fintech-dashboard-cards-info-graphic-chart {
 	display: flex;
 	flex-direction: column;
 	flex: 1;
@@ -25,7 +26,8 @@
 	padding: 1rem;
 }
 
-.fintech-dashboard-cards-info:hover {
+.fintech-dashboard-cards-info:hover,
+.fintech-dashboard-cards-info-graphic-chart:hover {
 	box-shadow: none;
 }
 
@@ -118,8 +120,103 @@ canvas {
 
 /******************************* TABLET STYLE *******************************/
 @media only screen and (max-width: 768px) {
+	body {
+		margin-left: 0.5rem;
+	}
+	.fintech-dashboard {
+		overflow: auto;
+		height: calc(100vh - 10rem);
+	}
+
+	.fintech-dashboard-h1 {
+		font-size: 1.4rem;
+	}
+
+	.fintech-dashboard-h2 {
+		font-size: 1.2rem;
+	}
+
+	#currentDate {
+		margin-bottom: 1rem;
+	}
+
+	.fintech-dashboard-cards {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.fintech-dashboard-cards-tablet {
+		display: flex;
+	}
+
+	.fintech-dashboard-cards-info {
+		padding: 0.3rem;
+		height: max-content;
+	}
+
+	.fintech-dashboard-cards-info-total {
+		margin-left: 3rem;
+	}
+
+	.fintech-dashboard-purchases-title {
+		margin: 0.5rem 0 0.5rem 0;
+	}
 }
 
 /**************************************** MOBILE STYLE ****************************************/
 @media only screen and (max-width: 375px) {
+	.fintech-dashboard {
+		height: 35rem;
+		overflow: auto;
+		width: 22.5rem;
+	}
+
+	.fintech-dashboard-h1 {
+		font-size: 1.3rem;
+	}
+
+	.fintech-dashboard-h2 {
+		font-size: 1.1rem;
+	}
+
+	#currentDate {
+		margin-bottom: 0.5rem;
+	}
+
+	canvas {
+		margin-top: 1rem;
+	}
+
+	.fintech-dashboard-cards-info {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		max-width: 12rem;
+		height: 18rem;
+		margin: 0;
+		padding: 0.3rem;
+		margin-right: 0.5rem;
+	}
+
+	.fintech-dashboard-cards-display {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.fintech-dashboard-cards-info-card-detail {
+		margin-bottom: 0.3rem;
+	}
+
+	.fintech-dashboard-cards-info-card {
+		padding: 0.5rem 0 0 0.5rem;
+	}
+
+	.fintech-dashboard-cards-info-total {
+		/* margin: 0rem; */
+		margin-left: 0.5rem;
+	}
+
+	.fintech-dashboard-purchases {
+		display: none;
+	}
 }

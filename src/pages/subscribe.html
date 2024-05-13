@@ -26,31 +26,30 @@
 					<input
 						type="text"
 						class="fintech-subscribe-inputs-name"
-						id="fintech-login-input-email"
 						placeholder="nome completo"
 					/>
 					<input
 						type="text"
 						class="fintech-subscribe-inputs-dayOfBirth"
-						id="fintech-login-input-email"
-						placeholder="data de nascimento"
+						placeholder="data de nascimento (dd/mm/aaaa)"
+						pattern="[0-3][0-9]/[0-1][0-9]/[0-9]{4}"
+						title="Por favor, insira uma data válida no formato dd/mm/aaaa."
 					/>
 					<input
 						type="text"
 						class="fintech-subscribe-inputs-cpf"
-						id="fintech-login-input-email"
 						placeholder="CPF"
+						pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+						title="Por favor, insira um CPF válido no formato xxx.xxx.xxx-xx"
 					/>
 					<input
 						type="text"
 						class="fintech-subscribe-inputs-password"
-						id="fintech-login-input-email"
 						placeholder="senha"
 					/>
 					<input
 						type="text"
 						class="fintech-subscribe-inputs-confirmPassword"
-						id="fintech-login-input-email"
 						placeholder="confirmar senha"
 					/>
 					<a onclick="signIn()" class="fintech-subscribe-inputs-button"

@@ -1,4 +1,4 @@
-/************************* OPEN/CLOSE MENU BUTTON FOR MOBILES **************************/
+/********************************* OPEN/CLOSE MENU BUTTON FOR MOBILES *********************************/
 function toggleSidebar() {
 	var sidebar = document.getElementById('fintech-sidebar');
 	sidebar.classList.toggle('open');
@@ -50,6 +50,6 @@ links.forEach(function (link) {
 });
 
 function toggleSidebar() {
-	var sidebar = document.querySelector('.fintech-sidebar-menu');
+	var sidebar = document.querySelector('.fintech-sidebar');
 	sidebar.classList.toggle('open');
 }
